@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Net_MAUI_Color_Mobil_App.MainPage">
+
+
+    <ContentPage.Resources>
+        <Color x:Key="Primary">#ab3527</Color>
+        <Color x:Key="Secondary">#775752</Color>
+        <Color x:Key="Tertiary">#705c2e</Color>
+    </ContentPage.Resources>
+
+
+    <Grid x:Name="Container" BackgroundColor="Black">
+        <Frame Margin="10,0,10,0" VerticalOptions="Center">
+            <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                <Label Text="Red Value:"/>
+                <Slider
+                    x:Name="sldRed"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChanged"/>
+
+                <Label Text="Green Value:"/>
+                <Slider
+                    x:Name="sldGreen"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChanged"/>
+
+                <Label Text="Blue Value:"/>
+                <Slider
+                    x:Name="sldBlue"
+                    MaximumTrackColor="{StaticResource Tertiary}"
+                    MinimumTrackColor="{StaticResource Secondary}"
+                    ThumbColor="{StaticResource Primary}"
+                    ValueChanged="Slider_ValueChanged"/>
+
+                <Frame CornerRadius="25" HorizontalOptions="Center">
+
+                    <Label
+                            x:Name="lblHex1"
+                            HorizontalTextAlignment="End"
+                            Text="HEX Value: #000000"
+                            VerticalOptions="Center"/>
+                </Frame>
+                <Button
+                    x:Name="btnRandom"
+                    BackgroundColor="{StaticResource Primary}"
+                    Text="Generete Random Color"
+                    Clicked="btn_Random_Clicked"/>
+            </VerticalStackLayout>
+        </Frame>
+
+    </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ContentPage>
